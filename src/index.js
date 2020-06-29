@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import './index.css';
 import App from './components/App';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
+import {fetchAllCategories} from './utils/utils'
 
-const initialState = []
 
-const store = createStore(rootReducer, {
-  cocktails: initialState
-});
+const store = createStore(rootReducer, applyMiddleware(thunk));
+store.dispatch(fetchAllCategories());
 
 
 ReactDOM.render(
