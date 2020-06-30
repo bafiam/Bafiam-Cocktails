@@ -7,12 +7,13 @@ import App from './components/App';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
-import {fetchAllCategories} from './utils/utils'
-
+import {fetchAllCategories, fetchAllCocktailByCategory} from './utils/utils'
+import 'bootstrap/dist/css/bootstrap.css';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 store.dispatch(fetchAllCategories());
 
+store.dispatch(fetchAllCocktailByCategory());
 
 ReactDOM.render(
   <React.StrictMode>
