@@ -13,8 +13,8 @@ export default function CocktailCard(props) {
         <div className="card-body">
           <h5 className="card-title">{response.strDrink}</h5>
         </div>
-        <div class="card-footer">
-          <small class="text-muted">Read more...</small>
+        <div className="card-footer">
+          <small className="text-muted">Read more...</small>
         </div>
       </div>
     </div>
