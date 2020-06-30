@@ -1,14 +1,18 @@
 import React from 'react';
 import '../App.css';
-import Cocktails from './Cocktails'
 import Navbar from './Navbar'
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
 function App() {
   return (
+    <Router>
     <div className="App">
      
       <Navbar></Navbar>
-      <Cocktails></Cocktails>
+      <Routes />
+      
     </div>
+    </Router>
   );
 }
 

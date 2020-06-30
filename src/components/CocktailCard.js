@@ -1,7 +1,8 @@
 import React from "react";
+import history from '../actions/History';
 
 export default function CocktailCard(props) {
-  const {response} = props
+  const { response } = props;
   return (
     <div className="card-group w-25 h-25 mb-2">
       <div className="card">
@@ -14,7 +15,9 @@ export default function CocktailCard(props) {
           <h5 className="card-title">{response.strDrink}</h5>
         </div>
         <div className="card-footer">
-          <small className="text-muted">Read more...</small>
+          <button type="button" class="btn btn-info" onClick={() => history.push('/cocktail')} value={response.idDrink} >
+            Instructions on how to make it
+          </button>
         </div>
       </div>
     </div>
