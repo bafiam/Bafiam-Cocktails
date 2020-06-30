@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const ItemCocktails = (props) => {
-  return (
-    <div>
-      single item
-     
-  
-    </div>
-  )
+export default class ItemCocktails extends Component {
+  componentDidMount (){
+    let id = this.props.match.params.id
+    console.log(id)
+  }
+  render() {
+    return (
+      <div>
+        hhaa
+      </div>
+    )
+  }
 }
-
-export default ItemCocktails

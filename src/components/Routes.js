@@ -11,7 +11,7 @@ export default class Routes extends Component {
       <Router history={history}>
                 <Switch>
                     <Route path="/" exact component={Cocktails} />
-                    <Route path="/cocktail" exact component={ItemCocktails} />
+                    <Route path="/cocktail/:id" exact component={ItemCocktails} />
                     
                 </Switch>
             </Router>

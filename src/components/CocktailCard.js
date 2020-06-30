@@ -15,7 +15,7 @@ export default function CocktailCard(props) {
           <h5 className="card-title">{response.strDrink}</h5>
         </div>
         <div className="card-footer">
-          <button type="button" class="btn btn-info" onClick={() => history.push('/cocktail')} value={response.idDrink} >
+          <button type="button" class="btn btn-info" onClick={() => history.push(`/cocktail/${response.idDrink}`)} value={response.idDrink} >
             Instructions on how to make it
           </button>
         </div>
