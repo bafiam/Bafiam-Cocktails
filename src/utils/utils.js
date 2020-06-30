@@ -68,19 +68,28 @@ export const fetchAllCocktailByCategory = () => {
         params: {
           c: category,
         },
-      }).then((response) => {
-  
+      })
+        .then((response) => {
           return dispatch(
-            fetchCocktailByCategory([category,
-              response.data.drinks,
-            ])
+            fetchCocktailByCategory([category, response.data.drinks])
           );
         })
         .catch((error) => {
-        throw error;
-      });
-    })
-      
+          throw error;
+        });
+    });
   };
 };
 
+export const filterCategory = (props) => {
+  const { filter, cocktails } = props;
+  if (cocktails && filter === "ALL") {
+    return cocktails;
+  }
+  return cocktails.map((cocktail) => {
+    if (cocktail[0] === filter) {
+      return cocktail;
+    }
+    return [];
+  });
+};

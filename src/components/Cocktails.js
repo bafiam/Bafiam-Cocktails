@@ -3,31 +3,31 @@ import { connect } from "react-redux";
 import CocktailCard from "./CocktailCard";
 import Loading from "./Loading";
 import Categories from "./Categories";
+import { CHANGE_CATEGORY_FILTER } from "../actions/index";
+import { filterCategory } from "../utils/utils";
 export class Cocktails extends Component {
   constructor(props) {
-    super(props)
-  
+    super(props);
+
     this.handleFilterChange = this.handleFilterChange.bind(this);
   }
 
   handleFilterChange(e) {
-    console.log(e.target.value);
+    const { updateFilter } = this.props;
+    updateFilter(e.target.value);
+    // console.log(this.props.filter)
   }
-  
+
   render() {
-    const { cocktails } = this.props;
+    const cocktails = filterCategory(this.props);
     let mapData;
-    if (cocktails.length === 11) {
+    if (cocktails && cocktails.length === 11) {
       mapData = cocktails.map((cocktail) => {
-        return cocktail[1].map((res) => {
-          return <CocktailCard response={res}></CocktailCard>;
-        });
-      });
-    } else if (cocktails.length === 1) {
-      mapData = cocktails.map((cocktail) => {
-        return cocktail[1].map((res) => {
-          return <CocktailCard response={res}></CocktailCard>;
-        });
+        if (cocktail[1] !== undefined) {
+          return cocktail[1].map((res) => {
+            return <CocktailCard response={res}></CocktailCard>;
+          });
+        }
       });
     } else {
       mapData = <Loading></Loading>;
@@ -46,6 +46,13 @@ export class Cocktails extends Component {
 
 const mapStateToProps = (state) => ({
   cocktails: state.cocktails,
+  filter: state.filter,
 });
 
-export default connect(mapStateToProps, null)(Cocktails);
+const mapDispatchToProps = (dispatch) => ({
+  updateFilter: (category) => {
+    dispatch(CHANGE_CATEGORY_FILTER(category));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cocktails);

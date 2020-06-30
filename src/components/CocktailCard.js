@@ -8,7 +8,7 @@ export default function CocktailCard(props) {
         <img
           className="card-img-top w-100 h-100;"
           src={response.strDrinkThumb}
-          alt="Card image cap"
+          alt="Card"
         />
         <div className="card-body">
           <h5 className="card-title">{response.strDrink}</h5>
