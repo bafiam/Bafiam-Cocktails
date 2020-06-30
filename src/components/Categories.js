@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 const Categories = ({ categories }) => {
   const mapCategories = categories.map((category) => {
+    
     return (
       <option value={category.strCategory} key={category.strCategory}>
         {category.strCategory}
