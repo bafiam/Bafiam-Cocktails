@@ -45,12 +45,16 @@ In this project, the complete feature of the app renders the following:
 - View the drink Ingredients
 - View instructions on how to mix the Ingredients
 
+Detailed project description can be found here[Catalogue of Statistics](https://www.notion.so/Catalogue-of-Statistics-72446e7fa33c403a9b6a0bc1de5c6cf5)
+
 ## Screenshots
 
 #### Home
+
 <img src="./home.png" alt="screenshot1"/>
 
 #### Single Item
+
 <img src="./item.png" alt="screenshot1"/>
 
 ## Prerequisites Installations
