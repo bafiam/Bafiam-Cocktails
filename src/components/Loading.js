@@ -1,8 +1,9 @@
 import React from 'react';
 import '../styling/Loading.css';
 
-export default function Loading() {
+const Loading = () => {
   return (
     <div className="loader" />
   );
 }
+export default Loading

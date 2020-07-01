@@ -5,7 +5,8 @@ import Cocktails from './Cocktails';
 import ItemCocktails from './ItemCocktails';
 import history from '../actions/History';
 
-const Routes = () => (
+const Routes = () => {
+  return(
   <Router history={history}>
     <Switch>
       <Route path="/" exact component={Cocktails} />
@@ -13,5 +14,6 @@ const Routes = () => (
 
     </Switch>
   </Router>
-);
+  )
+  };
 export default Routes;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import CocktailCard from './CocktailCard';
 import Loading from './Loading';
 import Categories from './Categories';
@@ -59,4 +60,4 @@ Cocktails.propTypes = {
   updateFilter: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cocktails);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cocktails));

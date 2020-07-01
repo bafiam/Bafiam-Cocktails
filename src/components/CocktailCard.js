@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import history from '../actions/History';
 
-export default function CocktailCard(props) {
+const CocktailCard = props => {
   const { response } = props;
   return (
     <div className="card-group w-25 h-25 mb-2">
@@ -23,7 +23,7 @@ export default function CocktailCard(props) {
       </div>
     </div>
   );
-}
+};
 
 CocktailCard.propTypes = {
   response: PropTypes.shape({
@@ -39,3 +39,4 @@ CocktailCard.defaultProps = {
     strDrinkThumb: '',
   }),
 };
+export default CocktailCard;

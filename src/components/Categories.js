@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 const Categories = ({ categories, filterCategories }) => {
   const mapCategories = categories.map(category => (
@@ -51,4 +52,4 @@ Categories.defaultProps = {
   ),
 };
 
-export default connect(mapStateToProps, null)(Categories);
+export default withRouter(connect(mapStateToProps, null)(Categories));

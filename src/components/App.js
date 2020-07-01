@@ -1,19 +1,19 @@
 import React from 'react';
 import '../App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import Navbar from './Navbar';
 import Routes from './Routes';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
 
         <Navbar />
         <Routes />
 
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

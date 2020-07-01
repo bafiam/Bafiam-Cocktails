@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Loading from './Loading';
 import ItemCocktailCard from './ItemCocktailCard';
 
-export default class ItemCocktails extends Component {
+class ItemCocktails extends Component {
   constructor(props) {
     super(props);
 
@@ -80,7 +80,7 @@ export default class ItemCocktails extends Component {
 ItemCocktails.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.string,
     }),
   }),
 
@@ -89,8 +89,9 @@ ItemCocktails.propTypes = {
 ItemCocktails.defaultProps = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      id: '11007',
+      id: '',
     }),
   }),
 
 };
+export default ItemCocktails;
