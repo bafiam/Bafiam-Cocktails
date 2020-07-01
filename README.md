@@ -102,7 +102,7 @@ your@pc:~$ npm run start
 
 ## Live Version
 
-This is the link to the live preview in Heroku. Feel free to visit.<br>
+This is the link to the live preview. Feel free to visit.<br>
 [Black Widow CockTails](https://vibrant-jennings-158558.netlify.app/)<br>
 
 <!-- ROADMAP -->
