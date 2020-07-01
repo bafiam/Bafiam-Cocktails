@@ -38,6 +38,7 @@ export default class ItemCocktails extends Component {
         });
       })
       .catch(error => {
+        // eslint-disable-next-line no-console
         console.log(error);
       });
   }

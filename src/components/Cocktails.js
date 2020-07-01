@@ -6,7 +6,7 @@ import Categories from './Categories';
 import { CHANGE_CATEGORY_FILTER } from '../actions/index';
 import { filterCategory } from '../utils/utils';
 
-export class Cocktails extends Component {
+class Cocktails extends Component {
   constructor(props) {
     super(props);
 
@@ -16,7 +16,6 @@ export class Cocktails extends Component {
   handleFilterChange(e) {
     const { updateFilter } = this.props;
     updateFilter(e.target.value);
-    // console.log(this.props.filter)
   }
 
   render() {
@@ -27,6 +26,7 @@ export class Cocktails extends Component {
         if (cocktail[1] !== undefined) {
           return cocktail[1].map(res => <CocktailCard response={res} />);
         }
+        return [];
       });
     } else {
       mapData = <Loading />;

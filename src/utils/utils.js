@@ -1,10 +1,6 @@
 import axios from 'axios';
-import { FETCH_CATEGORIES, FETCH_COCKTAILS } from '../actions/types';
 
-export const fetchCategory = categories => ({
-  type: FETCH_CATEGORIES,
-  categories,
-});
+import { fetchCategory, fetchCocktailByCategory } from '../actions/index';
 
 export const fetchAllCategories = () => dispatch => axios({
   method: 'GET',
@@ -23,11 +19,6 @@ export const fetchAllCategories = () => dispatch => axios({
   .catch(error => {
     throw error;
   });
-
-export const fetchCocktailByCategory = cocktails => ({
-  type: FETCH_COCKTAILS,
-  cocktails,
-});
 
 export const fetchAllCocktailByCategory = () => dispatch => {
   const allCategories = [

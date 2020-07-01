@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const ItemCocktailCard = props => {
   const {
@@ -15,6 +14,7 @@ const ItemCocktailCard = props => {
       if (entry[0].includes('strIngredient') && entry[1] !== null) {
         results.push(entry[1]);
       }
+      return [];
     });
     return results;
   };
@@ -24,6 +24,7 @@ const ItemCocktailCard = props => {
       if (entry[0].includes('strMeasure') && entry[1] !== null) {
         results.push(entry[1]);
       }
+      return [];
     });
     return results;
   };
@@ -62,7 +63,5 @@ const ItemCocktailCard = props => {
     </div>
   );
 };
-
-ItemCocktailCard.propTypes = {};
 
 export default ItemCocktailCard;
