@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  font-weight: 800;
+  font-size: 2.2em !important;
+}
+
+.img {
+  width: 200px;
+  height: 250px;
+}
+
+.card-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2em !important;
+  font-weight: 600;
+}
+
+.footers {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.6em !important;
+  font-weight: 600;
+
+}

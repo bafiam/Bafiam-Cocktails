@@ -54,7 +54,7 @@ export default class ItemCocktails extends Component {
         </div>
       );
     } else if (
-      this.state.isLoading === false
+      this.state.isLoading === false && this.state.itemCocktail !== null
       && this.state.itemCocktail.length > 0
     ) {
       const data = this.state.itemCocktail.map(item => item);
@@ -63,7 +63,7 @@ export default class ItemCocktails extends Component {
       loadData = (
         <div>
           <div className="alert alert-danger" role="alert">
-            Something went wrong!
+            Something went wrong! Navigate back to home page
           </div>
           <Loading />
         </div>

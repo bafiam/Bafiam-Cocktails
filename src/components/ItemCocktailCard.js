@@ -39,15 +39,15 @@ const ItemCocktailCard = props => {
   return (
     <div className="card-deck w-100 ">
       <div className="card w-100 h-50">
-        <div className="card-header text-center">{strCategory}</div>
+        <div className="card-header text-center text-uppercase">{strCategory}</div>
         <div className=" d-flex flex-row w-100">
           <img className="card-img-top w-50" src={strDrinkThumb} alt="Card " />
           <div className="card-body">
-            <h5 className="card-title">{strDrink}</h5>
+            <h5 className="card-title text-center">{strDrink}</h5>
             <p className="card-text">{strInstructions}</p>
             <div>
               <ul className="list-group">
-                <li className="list-group-item list-group-item-primary">
+                <li className="list-group-item list-group-item-primary text-center">
                   Ingredients
                 </li>
                 {mapIngredients}

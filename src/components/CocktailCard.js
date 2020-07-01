@@ -7,16 +7,16 @@ export default function CocktailCard(props) {
     <div className="card-group w-25 h-25 mb-2">
       <div className="card">
         <img
-          className="card-img-top w-100 h-100;"
+          className="card-img-top img"
           src={response.strDrinkThumb}
           alt="Card"
         />
-        <div className="card-body">
-          <h5 className="card-title">{response.strDrink}</h5>
+        <div className="card-body text-center">
+          <h5 className="card-title ">{response.strDrink}</h5>
         </div>
-        <div className="card-footer">
-          <button type="button" className="btn btn-info" onClick={() => history.push(`/cocktail/${response.idDrink}`)} value={response.idDrink}>
-            Instructions on how to make it
+        <div className="card-footer mr-auto ml-auto">
+          <button type="button" className="btn btn-info footers" onClick={() => history.push(`/cocktail/${response.idDrink}`)} value={response.idDrink}>
+            Instructions
           </button>
         </div>
       </div>
