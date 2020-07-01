@@ -23,6 +23,7 @@ const Categories = ({ categories, filterCategories }) => {
           onChange={(e) => filterCategories(e)}
         >
           <option selected disabled>Select....</option>
+          <option value = "ALL">ALL</option>
           {mapCategories}
         </select>
       </div>
