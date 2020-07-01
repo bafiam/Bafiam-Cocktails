@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
-import { BrowserRouter} from 'react-router-dom';
-import Navbar from './Navbar';
+import { BrowserRouter } from 'react-router-dom';
+
 import Routes from './Routes';
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
 
-        <Navbar />
         <Routes />
 
       </div>

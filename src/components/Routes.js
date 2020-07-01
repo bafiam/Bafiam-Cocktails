@@ -1,19 +1,16 @@
 import React from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navbar from './Navbar';
 import Cocktails from './Cocktails';
 import ItemCocktails from './ItemCocktails';
-import history from '../actions/History';
 
-const Routes = () => {
-  return(
-  <Router history={history}>
-    <Switch>
-      <Route path="/" exact component={Cocktails} />
-      <Route path="/cocktail/:id" exact component={ItemCocktails} />
+const Routes = () => (
+  <Router>
+    <Navbar />
 
-    </Switch>
+    <Route path="/" exact component={Cocktails} />
+    <Route path="/cocktail/:id" exact component={ItemCocktails} />
+
   </Router>
-  )
-  };
+);
 export default Routes;
