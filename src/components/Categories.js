@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const Categories = ({ categories, filterCategories }) => {
   const mapCategories = categories.map(category => (
@@ -11,7 +12,8 @@ const Categories = ({ categories, filterCategories }) => {
     <div className="container">
       <div className="input-group mb-3">
         <div className="input-group-prepend">
-          <label className="input-group-text" htmlFor="inputGroupSelect01">
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+          <label className="input-group-text">
             Filter by Category
           </label>
         </div>
@@ -33,8 +35,20 @@ const mapStateToProps = state => ({
   categories: state.categories,
 });
 
-// Categories.propTypes = {
-//   filterCategories: PropTypes.func.isRequired,
-// };
+Categories.propTypes = {
+  filterCategories: PropTypes.func.isRequired,
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      strCategory: PropTypes.string,
+    }),
+  ),
+};
+Categories.defaultProps = {
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      strCategory: 'ALL',
+    }),
+  ),
+};
 
 export default connect(mapStateToProps, null)(Categories);

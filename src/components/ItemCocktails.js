@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import Loading from './Loading';
 import ItemCocktailCard from './ItemCocktailCard';
 
@@ -16,6 +17,7 @@ export default class ItemCocktails extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
+    // eslint-disable-next-line react/destructuring-assignment
     const { id } = this.props.match.params;
     axios({
       method: 'GET',
@@ -44,8 +46,9 @@ export default class ItemCocktails extends Component {
   }
 
   render() {
+    const { isLoading, itemCocktail, id } = this.state;
     let loadData;
-    if (this.state.isLoading === true) {
+    if (isLoading === true) {
       loadData = (
         <div>
           <div className="alert alert-info" role="alert">
@@ -55,11 +58,11 @@ export default class ItemCocktails extends Component {
         </div>
       );
     } else if (
-      this.state.isLoading === false && this.state.itemCocktail !== null
-      && this.state.itemCocktail.length > 0
+      isLoading === false && itemCocktail !== null
+      && itemCocktail.length > 0
     ) {
-      const data = this.state.itemCocktail.map(item => item);
-      loadData = <ItemCocktailCard props={data[0]} key={this.state.id} />;
+      const data = itemCocktail.map(item => item);
+      loadData = <ItemCocktailCard props={data[0]} key={id} />;
     } else {
       loadData = (
         <div>
@@ -73,3 +76,21 @@ export default class ItemCocktails extends Component {
     return <div className="container">{loadData}</div>;
   }
 }
+
+ItemCocktails.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }),
+
+};
+
+ItemCocktails.defaultProps = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: '11007',
+    }),
+  }),
+
+};

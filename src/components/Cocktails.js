@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import CocktailCard from './CocktailCard';
 import Loading from './Loading';
 import Categories from './Categories';
@@ -24,7 +25,7 @@ class Cocktails extends Component {
     if (cocktails && cocktails.length === 11) {
       mapData = cocktails.map(cocktail => {
         if (cocktail[1] !== undefined) {
-          return cocktail[1].map(res => <CocktailCard response={res} />);
+          return cocktail[1].map(res => <CocktailCard response={res} key={res.idDrink} />);
         }
         return [];
       });
@@ -53,5 +54,9 @@ const mapDispatchToProps = dispatch => ({
     dispatch(CHANGE_CATEGORY_FILTER(category));
   },
 });
+
+Cocktails.propTypes = {
+  updateFilter: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cocktails);

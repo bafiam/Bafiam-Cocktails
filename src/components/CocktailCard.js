@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import history from '../actions/History';
 
 export default function CocktailCard(props) {
@@ -23,3 +24,18 @@ export default function CocktailCard(props) {
     </div>
   );
 }
+
+CocktailCard.propTypes = {
+  response: PropTypes.shape({
+    strDrink: PropTypes.string,
+    idDrink: PropTypes.string,
+    strDrinkThumb: PropTypes.string,
+  }),
+};
+CocktailCard.defaultProps = {
+  response: PropTypes.shape({
+    strDrink: '',
+    idDrink: '',
+    strDrinkThumb: '',
+  }),
+};

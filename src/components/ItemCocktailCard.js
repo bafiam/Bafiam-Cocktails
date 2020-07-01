@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ItemCocktailCard = props => {
   const {
@@ -7,7 +8,9 @@ const ItemCocktailCard = props => {
     strInstructions,
     strGlass,
     strCategory,
+    // eslint-disable-next-line react/destructuring-assignment
   } = props.props;
+
   const ingredients = data => {
     const results = [];
     Object.entries(data).map(entry => {
@@ -28,8 +31,9 @@ const ItemCocktailCard = props => {
     });
     return results;
   };
+  // eslint-disable-next-line react/destructuring-assignment
   const mapIngredients = ingredients(props.props).map((entry, index) => (
-    <li className="list-group-item d-flex justify-content-between align-items-center">
+    <li className="list-group-item d-flex justify-content-between align-items-center" key={entry}>
       {entry}
       <span className="badge badge-primary badge-pill">
         {measures(props.props)[index]}
@@ -64,4 +68,22 @@ const ItemCocktailCard = props => {
   );
 };
 
+ItemCocktailCard.propTypes = {
+  props: PropTypes.shape({
+    strDrinkThumb: PropTypes.string,
+    strDrink: PropTypes.string,
+    strInstructions: PropTypes.string,
+    strGlass: PropTypes.string,
+    strCategory: PropTypes.string,
+  }),
+};
+ItemCocktailCard.defaultProps = {
+  props: PropTypes.shape({
+    strDrinkThumb: '',
+    strDrink: '',
+    strInstructions: '',
+    strGlass: '',
+    strCategory: '',
+  }),
+};
 export default ItemCocktailCard;
