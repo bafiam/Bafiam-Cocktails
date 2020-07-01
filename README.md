@@ -1,68 +1,125 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+[![Contributor][contributor-shield]][contributor-url]
+[![Issues][issues-shield]][issues-url]
+<br />
 
-## Available Scripts
+<p align="center">
+  <h1 align="center">Black Widow CockTails App </h1>
+  <p align="center">
+    React/Redux
+    <br />
+    <a href="https://github.com/bafiam/Bafiam-Cocktails.git"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    ·
+    <a href="https://github.com/bafiam/Bafiam-Cocktails/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/bafiam/Bafiam-Cocktails/issues">Request Feature</a>
+  </p>
+</p>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About the Project](#about-the-project)
+- [Screenshots](#screenshots)
+- [Prerequisites Installations](#prerequisites-installations)
+- [Technology used](#technology-used)
+- [Usage/Getting Started](#how-to-Use)
+- [Live Version](#live-version)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Authors](#authors)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<!-- ABOUT THE PROJECT -->
 
-### `npm test`
+## About The Project
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is a Cocktail App built with React and Redux. It implements the functionality of building components in React and connecting the components to fetch data from an API then use the Redux store using Redux actions, reducers and methods.
 
-### `npm run build`
+In this project, the complete feature of the app renders the following:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A list of cocktails from different categories
+- A filter of the coctails based on the category
+- View a single drink
+- View the drink Ingredients
+- View instructions on how to mix the Ingredients
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="./home.png" alt="screenshot1"/>
+<img src="./item.png" alt="screenshot1"/>
 
-### `npm run eject`
+## Prerequisites Installations
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p>If you want a copy of this project running on your machine you have to install:</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- <a href="https://nodejs.org/en/">Node.js (v5. 2.0 or greater)</a>
+- <a href="https://git-scm.com/downloads">Git version control system</a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technology used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Node.js
+- React
+- React-DOM
+- React-Create-App
+- Redux
+- npm
+- CSS
+- ES6
+- React-thunk
 
-## Learn More
+## Usage/Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Once you have installed the required package shown on the [Prerequisites Installations](#required-installations), proceed with the following steps
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone the Repository,
 
-### Code Splitting
+```Shell
+your@pc:~$ git clone https://github.com/bafiam/Bafiam-Cocktails
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Move into the cloned folder
 
-### Analyzing the Bundle Size
+```Shell
+your@pc:~$ cd Bafiam-Cocktails
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Get the dependencies needed for the app
 
-### Making a Progressive Web App
+```Shell
+your@pc:~$ npm install
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Start the server and use the app
 
-### Advanced Configuration
+```Shell
+your@pc:~$ npm run start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Live Version
 
-### Deployment
+This is the link to the live preview in Heroku. Feel free to visit.<br>
+[Black Widow CockTails](https://vibrant-jennings-158558.netlify.app/)<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<!-- ROADMAP -->
 
-### `npm run build` fails to minify
+## Roadmap
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+See the [open issues](https://github.com/bafiam/Bafiam-Cocktails/issues) for a list of proposed features (and known issues).
+
+<!-- CONTACT -->
+
+## Authors
+
+Stephen Gumba
+
+- [Github profile](https://github.com/bafiam)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributor-shield]: https://img.shields.io/badge/Contributors-1-%2300ff00
+[contributor-url]: https://github.com/bafiam/Bafiam-Cocktails/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
+[issues-url]: https://github.com/bafiam/Bafiam-Cocktails/issues/
