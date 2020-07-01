@@ -47,7 +47,10 @@ In this project, the complete feature of the app renders the following:
 
 ## Screenshots
 
+#### Home
 <img src="./home.png" alt="screenshot1"/>
+
+#### Single Item
 <img src="./item.png" alt="screenshot1"/>
 
 ## Prerequisites Installations
