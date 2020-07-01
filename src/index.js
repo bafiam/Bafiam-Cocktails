@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import './index.css';
-import App from './components/App';
 import { Provider } from 'react-redux';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers/index';
-import {fetchAllCategories, fetchAllCocktailByCategory} from './utils/utils'
+import { fetchAllCategories, fetchAllCocktailByCategory } from './utils/utils';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
@@ -17,11 +17,11 @@ store.dispatch(fetchAllCocktailByCategory());
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store} >
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

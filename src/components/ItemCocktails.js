@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Loading from "./Loading";
-import ItemCocktailCard from "./ItemCocktailCard";
+import React, { Component } from 'react';
+import axios from 'axios';
+import Loading from './Loading';
+import ItemCocktailCard from './ItemCocktailCard';
 
 export default class ItemCocktails extends Component {
   constructor(props) {
@@ -10,34 +10,34 @@ export default class ItemCocktails extends Component {
     this.state = {
       isLoading: false,
       itemCocktail: [],
-      id:null
+      id: null,
     };
   }
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    let id = this.props.match.params.id;
+    const { id } = this.props.match.params;
     axios({
-      method: "GET",
-      url: "https://the-cocktail-db.p.rapidapi.com/lookup.php",
+      method: 'GET',
+      url: 'https://the-cocktail-db.p.rapidapi.com/lookup.php',
       headers: {
-        "content-type": "application/octet-stream",
-        "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
-        "x-rapidapi-key": "4823c0e453msh880ff1391e635c2p163ad2jsn0031468c3493",
+        'content-type': 'application/octet-stream',
+        'x-rapidapi-host': 'the-cocktail-db.p.rapidapi.com',
+        'x-rapidapi-key': '4823c0e453msh880ff1391e635c2p163ad2jsn0031468c3493',
         useQueryString: true,
       },
       params: {
         i: id,
       },
     })
-      .then((response) => {
+      .then(response => {
         this.setState({
           isLoading: false,
           itemCocktail: response.data.drinks,
-          id:id
+          id,
         });
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
       });
   }
@@ -50,26 +50,22 @@ export default class ItemCocktails extends Component {
           <div className="alert alert-info" role="alert">
             Loading data in a moment!
           </div>
-          <Loading></Loading>
+          <Loading />
         </div>
       );
     } else if (
-      this.state.isLoading === false &&
-      this.state.itemCocktail.length > 0
+      this.state.isLoading === false
+      && this.state.itemCocktail.length > 0
     ) {
-        let data = this.state.itemCocktail.map((item) => {
-            return item
-        })
-      loadData = <ItemCocktailCard props ={data[0]} key={this.state.id}></ItemCocktailCard>
-      
-      
+      const data = this.state.itemCocktail.map(item => item);
+      loadData = <ItemCocktailCard props={data[0]} key={this.state.id} />;
     } else {
       loadData = (
         <div>
           <div className="alert alert-danger" role="alert">
             Something went wrong!
           </div>
-          <Loading></Loading>
+          <Loading />
         </div>
       );
     }

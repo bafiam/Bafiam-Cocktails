@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import history from '../actions/History';
 
 export default function CocktailCard(props) {
@@ -15,7 +15,7 @@ export default function CocktailCard(props) {
           <h5 className="card-title">{response.strDrink}</h5>
         </div>
         <div className="card-footer">
-          <button type="button" className="btn btn-info" onClick={() => history.push(`/cocktail/${response.idDrink}`)} value={response.idDrink} >
+          <button type="button" className="btn btn-info" onClick={() => history.push(`/cocktail/${response.idDrink}`)} value={response.idDrink}>
             Instructions on how to make it
           </button>
         </div>

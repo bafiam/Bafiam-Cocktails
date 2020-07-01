@@ -1,10 +1,11 @@
-import { FILTER_BY_CATEGORY } from './types'
+import { FILTER_BY_CATEGORY } from './types';
+
 const CHANGE_CATEGORY_FILTER = category => ({
-  type: FILTER_BY_CATEGORY ,
+  type: FILTER_BY_CATEGORY,
   category,
 });
 
 export {
-  CHANGE_CATEGORY_FILTER
-  
+  CHANGE_CATEGORY_FILTER,
+
 };

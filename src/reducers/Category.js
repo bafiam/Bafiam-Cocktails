@@ -1,4 +1,4 @@
-import { FETCH_CATEGORIES } from "../actions/types";
+import { FETCH_CATEGORIES } from '../actions/types';
 
 const categoryReducer = (state = [], action) => {
   switch (action.type) {

@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import CocktailCard from "./CocktailCard";
-import Loading from "./Loading";
-import Categories from "./Categories";
-import { CHANGE_CATEGORY_FILTER } from "../actions/index";
-import { filterCategory } from "../utils/utils";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import CocktailCard from './CocktailCard';
+import Loading from './Loading';
+import Categories from './Categories';
+import { CHANGE_CATEGORY_FILTER } from '../actions/index';
+import { filterCategory } from '../utils/utils';
+
 export class Cocktails extends Component {
   constructor(props) {
     super(props);
@@ -22,19 +23,17 @@ export class Cocktails extends Component {
     const cocktails = filterCategory(this.props);
     let mapData;
     if (cocktails && cocktails.length === 11) {
-      mapData = cocktails.map((cocktail) => {
+      mapData = cocktails.map(cocktail => {
         if (cocktail[1] !== undefined) {
-          return cocktail[1].map((res) => {
-            return <CocktailCard response={res}></CocktailCard>;
-          });
+          return cocktail[1].map(res => <CocktailCard response={res} />);
         }
       });
     } else {
-      mapData = <Loading></Loading>;
+      mapData = <Loading />;
     }
     return (
       <div>
-        <Categories filterCategories={this.handleFilterChange}></Categories>
+        <Categories filterCategories={this.handleFilterChange} />
 
         <div className="container d-flex align-content-around flex-wrap">
           {mapData}
@@ -44,13 +43,13 @@ export class Cocktails extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   cocktails: state.cocktails,
   filter: state.filter,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  updateFilter: (category) => {
+const mapDispatchToProps = dispatch => ({
+  updateFilter: category => {
     dispatch(CHANGE_CATEGORY_FILTER(category));
   },
 });

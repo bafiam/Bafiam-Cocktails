@@ -1,29 +1,27 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
 const Categories = ({ categories, filterCategories }) => {
-  const mapCategories = categories.map((category) => {
-    return (
-      <option value={category.strCategory} key={category.strCategory}>
-        {category.strCategory}
-      </option>
-    );
-  });
+  const mapCategories = categories.map(category => (
+    <option value={category.strCategory} key={category.strCategory}>
+      {category.strCategory}
+    </option>
+  ));
   return (
     <div className="container">
       <div className="input-group mb-3">
         <div className="input-group-prepend">
-          <label className="input-group-text" for="inputGroupSelect01">
+          <label className="input-group-text" htmlFor="inputGroupSelect01">
             Filter by Category
           </label>
         </div>
         <select
           className="custom-select category"
           id="inputGroupSelect01"
-          onChange={(e) => filterCategories(e)}
+          onChange={e => filterCategories(e)}
         >
           <option selected disabled>Select....</option>
-          <option value = "ALL">ALL</option>
+          <option value="ALL">ALL</option>
           {mapCategories}
         </select>
       </div>
@@ -31,7 +29,7 @@ const Categories = ({ categories, filterCategories }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   categories: state.categories,
 });
 
