@@ -7,9 +7,9 @@ const CocktailCard = props => {
 
   return (
     <div className="card-group w-25 h-25 mb-2">
-      <div className="card">
+      <div className="card ">
         <img
-          className="card-img-top img"
+          className="card-img-top"
           src={response.strDrinkThumb}
           alt="Card"
         />
