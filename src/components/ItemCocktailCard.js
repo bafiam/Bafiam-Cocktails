@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ItemCocktailCard = props => {
+const { itemData } = props
   const {
     strDrinkThumb,
     strDrink,
     strInstructions,
     strGlass,
     strCategory,
-    // eslint-disable-next-line react/destructuring-assignment
-  } = props.props;
+  } = itemData;
+  
+  
+  
 
   const ingredients = data => {
     const results = [];
@@ -31,12 +34,13 @@ const ItemCocktailCard = props => {
     });
     return results;
   };
-  // eslint-disable-next-line react/destructuring-assignment
-  const mapIngredients = ingredients(props.props).map((entry, index) => (
-    <li className="list-group-item d-flex justify-content-between align-items-center" key={entry}>
+  const mapIngredients = ingredients(itemData).map((entry, index) => (
+    <li className="list-group-item d-flex justify-content-between align-items-center" 
+    data-testid={`badge-${index}`}
+    key={entry}>
       {entry}
-      <span className="badge badge-primary badge-pill">
-        {measures(props.props)[index]}
+      <span className="badge badge-primary badge-pill " data-testid={`badge-pill-${index}`}>
+        {measures(itemData)[index]}
       </span>
     </li>
   ));
@@ -44,12 +48,12 @@ const ItemCocktailCard = props => {
   return (
     <div className="card-deck w-100 ">
       <div className="card w-100 h-50">
-        <div className="card-header text-center text-uppercase">{strCategory}</div>
+        <div className="card-header text-center text-uppercase" data-testid="card-header">{strCategory}</div>
         <div className=" d-flex flex-row w-100">
-          <img className="card-img-top w-50" src={strDrinkThumb} alt="Card " />
+          <img className="card-img-top w-50" src={strDrinkThumb} data-testid="card-img-top" alt="Card " />
           <div className="card-body">
-            <h5 className="card-title text-center">{strDrink}</h5>
-            <p className="card-text">{strInstructions}</p>
+            <h5 className="card-title text-center" data-testid="card-title">{strDrink}</h5>
+            <p className="card-text" data-testid= "card-text">{strInstructions}</p>
             <div>
               <ul className="list-group">
                 <li className="list-group-item list-group-item-primary text-center">
@@ -69,7 +73,7 @@ const ItemCocktailCard = props => {
 };
 
 ItemCocktailCard.propTypes = {
-  props: PropTypes.shape({
+  itemData: PropTypes.shape({
     strDrinkThumb: PropTypes.string,
     strDrink: PropTypes.string,
     strInstructions: PropTypes.string,
@@ -78,7 +82,7 @@ ItemCocktailCard.propTypes = {
   }),
 };
 ItemCocktailCard.defaultProps = {
-  props: PropTypes.shape({
+  itemData: PropTypes.shape({
     strDrinkThumb: '',
     strDrink: '',
     strInstructions: '',

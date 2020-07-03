@@ -62,7 +62,7 @@ class ItemCocktails extends Component {
       && itemCocktail.length > 0
     ) {
       const data = itemCocktail.map(item => item);
-      loadData = <ItemCocktailCard props={data[0]} key={id} />;
+      loadData = <ItemCocktailCard itemData={data[0]} key={id} />;
     } else {
       loadData = (
         <div>
