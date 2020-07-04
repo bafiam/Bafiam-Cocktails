@@ -1,19 +1,15 @@
-import { BrowserRouter } from "react-router-dom";
-import React from "react";
-import Navbar from "../Navbar";
-import { render } from "@testing-library/react";
+import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { render } from '@testing-library/react';
+import Navbar from '../Navbar';
 
 describe('Test the Navbar', () => {
   test('should have a / url in the href attribute', () => {
     const { getByTestId } = render(
       <BrowserRouter>
-        <Navbar></Navbar>
-      </BrowserRouter>
+        <Navbar />
+      </BrowserRouter>,
     );
-    expect(getByTestId("navbar-brand")).toHaveAttribute("href", "/");
-    
-    
-  })
-  
-  
-})
+    expect(getByTestId('navbar-brand')).toHaveAttribute('href', '/');
+  });
+});

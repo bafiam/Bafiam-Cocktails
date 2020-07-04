@@ -23,7 +23,7 @@ const Categories = ({ categories, filterCategories }) => {
           id="inputGroupSelect01"
           onChange={e => filterCategories(e)}
         >
-          <option selected disabled>Select....</option>
+          <option disabled>Select....</option>
           <option value="ALL">ALL</option>
           {mapCategories}
         </select>

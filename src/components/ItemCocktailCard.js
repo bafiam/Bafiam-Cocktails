@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ItemCocktailCard = props => {
-const { itemData } = props
+  const { itemData } = props;
   const {
     strDrinkThumb,
     strDrink,
@@ -10,9 +10,6 @@ const { itemData } = props
     strGlass,
     strCategory,
   } = itemData;
-  
-  
-  
 
   const ingredients = data => {
     const results = [];
@@ -35,9 +32,11 @@ const { itemData } = props
     return results;
   };
   const mapIngredients = ingredients(itemData).map((entry, index) => (
-    <li className="list-group-item d-flex justify-content-between align-items-center" 
-    data-testid={`badge-${index}`}
-    key={entry}>
+    <li
+      className="list-group-item d-flex justify-content-between align-items-center"
+      data-testid={`badge-${index}`}
+      key={entry}
+    >
       {entry}
       <span className="badge badge-primary badge-pill " data-testid={`badge-pill-${index}`}>
         {measures(itemData)[index]}
@@ -53,7 +52,7 @@ const { itemData } = props
           <img className="card-img-top w-50" src={strDrinkThumb} data-testid="card-img-top" alt="Card " />
           <div className="card-body">
             <h5 className="card-title text-center" data-testid="card-title">{strDrink}</h5>
-            <p className="card-text" data-testid= "card-text">{strInstructions}</p>
+            <p className="card-text" data-testid="card-text">{strInstructions}</p>
             <div>
               <ul className="list-group">
                 <li className="list-group-item list-group-item-primary text-center">

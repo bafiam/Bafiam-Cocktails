@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-const CocktailCard = (props) => {
+const CocktailCard = props => {
   const { response } = props;
 
   return (
@@ -25,7 +25,7 @@ const CocktailCard = (props) => {
             className="btn btn-info"
             data-testid="card-btn"
           >
-            {" "}
+            {' '}
             Instructions
           </Link>
         </div>
@@ -43,9 +43,9 @@ CocktailCard.propTypes = {
 };
 CocktailCard.defaultProps = {
   response: PropTypes.shape({
-    strDrink: "",
-    idDrink: "",
-    strDrinkThumb: "",
+    strDrink: '',
+    idDrink: '',
+    strDrinkThumb: '',
   }),
 };
 export default CocktailCard;
