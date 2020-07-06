@@ -1,39 +1,24 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  font-weight: 800 !important;
+  font-size: 2.2em !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img {
+  width: 200px;
+  height: 250px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.card-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2em !important;
+  font-weight: 600;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.footers {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.6em !important;
+  font-weight: 600;
 }
