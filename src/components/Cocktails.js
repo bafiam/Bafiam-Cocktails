@@ -44,7 +44,7 @@ class Cocktails extends Component {
     );
   }
 }
- 
+
 const mapStateToProps = state => ({
   cocktails: state.cocktails,
   filter: state.filter,
