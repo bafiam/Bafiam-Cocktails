@@ -27,6 +27,13 @@
   text-align: center;
 }
 
+@media (min-width: 320px) {
+  .navbar-brand {
+    font-weight: 800 !important;
+    font-size: 1.8em !important;
+  }
+}
+
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 2 !important;
