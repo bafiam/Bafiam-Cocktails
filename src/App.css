@@ -23,11 +23,20 @@
   font-weight: 600;
 }
 
+.card-footer {
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 2 !important;
     -moz-column-count: 2 !important;
     column-count: 2 !important;
+  }
+
+  .card-title {
+    font-size: 1em !important;
+    font-weight: 600;
   }
 }
 
