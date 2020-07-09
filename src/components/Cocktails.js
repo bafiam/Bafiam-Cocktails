@@ -37,14 +37,14 @@ class Cocktails extends Component {
       <div>
         <Categories filterCategories={this.handleFilterChange} />
 
-        <div className="container d-flex align-content-around flex-wrap">
+        <div className="container-fluid card-columns">
           {mapData}
         </div>
       </div>
     );
   }
 }
-
+ 
 const mapStateToProps = state => ({
   cocktails: state.cocktails,
   filter: state.filter,
