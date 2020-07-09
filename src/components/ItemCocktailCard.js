@@ -48,8 +48,8 @@ const ItemCocktailCard = props => {
     <div className="card-deck w-100 ">
       <div className="card w-100 h-50">
         <div className="card-header text-center text-uppercase" data-testid="card-header">{strCategory}</div>
-        <div className=" d-flex flex-row w-100">
-          <img className="card-img-top w-50" src={strDrinkThumb} data-testid="card-img-top" alt="Card " />
+        <div className=" d-flex flex-md-row w-100 flex-column ">
+          <img className="card-img-top w-50 m-auto m-md-0" src={strDrinkThumb} data-testid="card-img-top" alt="Card " />
           <div className="card-body">
             <h5 className="card-title text-center" data-testid="card-title">{strDrink}</h5>
             <p className="card-text" data-testid="card-text">{strInstructions}</p>
