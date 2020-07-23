@@ -35,12 +35,12 @@
 
 ## About The Project
 
-This project is a Cocktail App built with React and Redux. It implements the functionality of building components in React and connecting the components to fetch data from an API then use the Redux store using Redux actions, reducers and methods.
+This project is a Cocktail App built with React and Redux. It implements the functionality of building components in React and connecting the components to fetch data from an API then uses the Redux store using Redux actions, reducers, and methods.
 
 In this project, the complete feature of the app renders the following:
 
 - A list of cocktails from different categories
-- A filter of the coctails based on the category
+- A filter of the cocktails based on the category
 - View a single drink
 - View the drink Ingredients
 - View instructions on how to mix the Ingredients
