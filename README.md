@@ -121,7 +121,7 @@ See the [open issues](https://github.com/bafiam/Bafiam-Cocktails/issues) for a l
 
 Stephen Gumba
 
-- [Github profile](https://github.com/bafiam)
+- [GitHub profile](https://github.com/bafiam)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
